@@ -3,6 +3,7 @@ package gov.iti.jets.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -24,5 +25,15 @@ public class ApplicationConfiguration implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/resources/css/**").addResourceLocations("/WEB-INF/css/");
+    }
+
+    @Bean
+    public DriverManagerDataSource driverManagerDataSource (){
+        DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
+        driverManagerDataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+        driverManagerDataSource.setUrl("jdbc:mysql://localhost:3306/book_store");
+        driverManagerDataSource.setUsername("root");
+        driverManagerDataSource.setPassword("");
+        return driverManagerDataSource;
     }
 }

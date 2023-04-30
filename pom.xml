@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>gov.iti.jets</groupId>
@@ -27,11 +28,11 @@
       <version>6.0.7</version>
     </dependency>
 
-<!--    <dependency>-->
-<!--      <groupId>commons-fileupload</groupId>-->
-<!--      <artifactId>commons-fileupload</artifactId>-->
-<!--      <version>1.4</version>-->
-<!--    </dependency>-->
+    <!--    <dependency>-->
+    <!--      <groupId>commons-fileupload</groupId>-->
+    <!--      <artifactId>commons-fileupload</artifactId>-->
+    <!--      <version>1.4</version>-->
+    <!--    </dependency>-->
 
     <dependency>
       <groupId>org.springframework</groupId>
@@ -76,6 +77,12 @@
     </dependency>
 
     <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>6.0.7</version>
+    </dependency>
+
+    <dependency>
       <groupId>org.glassfish.web</groupId>
       <artifactId>jakarta.servlet.jsp.jstl</artifactId>
       <version>3.0.1</version>
@@ -98,18 +105,18 @@
       <groupId>org.hibernate.orm</groupId>
       <artifactId>hibernate-core</artifactId>
       <version>6.0.2.Final</version>
-   </dependency>
+    </dependency>
 
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
       <version>8.0.32</version>
-   </dependency>
+    </dependency>
 
     <dependency>
-    <groupId>org.mapstruct</groupId>
-    <artifactId>mapstruct</artifactId>
-    <version>1.5.3.Final</version>
+      <groupId>org.mapstruct</groupId>
+      <artifactId>mapstruct</artifactId>
+      <version>1.5.3.Final</version>
     </dependency>
 
   </dependencies>
@@ -167,13 +174,15 @@
         </configuration>
       </plugin>
     </plugins>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to
+      parent pom) -->
       <plugins>
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.1.0</version>
         </plugin>
-        <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
+        <!-- see
+        http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
         <plugin>
           <artifactId>maven-resources-plugin</artifactId>
           <version>3.0.2</version>
