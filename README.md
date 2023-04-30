@@ -1,5 +1,5 @@
 # BookStore
-BookStore is a simple crud project to manage books and there authors
+BookStore is a simple crud project to manage books and  authors
 
 ## Technologies Used
 
